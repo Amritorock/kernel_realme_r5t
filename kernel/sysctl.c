@@ -1683,11 +1683,7 @@ static struct ctl_table vm_table[] = {
 		.procname	= "compact_memory",
 		.data		= &sysctl_compact_memory,
 		.maxlen		= sizeof(int),
-#ifdef CONFIG_VENDOR_EDIT
-		.mode		= 0222,
-#else
 		.mode		= 0200,
-#endif /*CONFIG_VENDOR_EDIT*/
 		.proc_handler	= sysctl_compaction_handler,
 	},
 	{
